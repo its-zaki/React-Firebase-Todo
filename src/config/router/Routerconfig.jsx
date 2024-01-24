@@ -4,6 +4,7 @@ import ResponsiveAppBar from '../../components/Navbar'
 import Home from '../../screens/home/Home'
 import Login from '../../screens/login/Login'
 import Register from '../../screens/register/Register'
+import ProtectedRoutes from './protectedRoutes'
 
 
 const Routerconfig = () => {
@@ -11,7 +12,7 @@ const Routerconfig = () => {
     <BrowserRouter>
     <ResponsiveAppBar/>
         <Routes>
-            <Route path='/' element={<Home/>}/>
+            <Route path='/' element={<ProtectedRoutes components={<Home/>}/>}/>
             <Route path='login' element={<Login/>}/>
             <Route path='register' element={<Register/>}/>
         </Routes>
